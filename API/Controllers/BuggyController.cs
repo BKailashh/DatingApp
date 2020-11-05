@@ -1,3 +1,8 @@
+using API.Data;
+using API.Entities;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
 namespace API.Controllers
 {
     public class BuggyController : BaseApiController
@@ -32,7 +37,7 @@ namespace API.Controllers
         {
             var thing=_context.Users.Find(-1);
 
-            var thingToReturn=thing.toString();
+            var thingToReturn=thing.ToString();
 
             return thingToReturn;
         }
